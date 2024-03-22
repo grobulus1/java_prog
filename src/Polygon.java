@@ -14,4 +14,12 @@ public class Polygon {
         return poly.toString();
     }
 
+    public Polygon(Polygon polygon)
+    {
+        this.points = new Point[polygon.points.length];
+        for(int i = 0; i<polygon.points.length; i++)
+        {
+            points[i] = new Point(polygon.points[i].x, polygon.points[i].y);
+        }
+    }
 }
